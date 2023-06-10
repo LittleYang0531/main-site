@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <title>LittleYang0531</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="index.js"></script>
+    <link rel="icon" href="assets/favicon.jpeg" type="image/jpg"/>
+</head>
+<body>
+    <div class="sidebar" id="sidebar" style="left: -1000px">
+        <div class="control-ball flex justify-content align-items" id="hideSidebarButton" style="opacity: 0; z-index: -1" onclick="hideSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 1024 1024" height="30px" width="30px">
+                <path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"/>
+            </svg>
+        </div>
+        <div class="control-ball flex justify-content align-items" id="showSidebarButton" onclick="showSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 1024 1024" height="30px" width="30px">
+                <path d="M765.7 486.8 314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"/>
+            </svg>
+        </div>
+        <div class="favicon flex">
+            <img src="assets/favicon.jpeg" class="favicon-image"/>
+        </div>
+        <div class="sidebar-box flex justify-content align-items" onclick="location.href='/index.php'">
+            <div style="margin-top: 6px">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="1em" width="1em">
+                    <path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"/>
+                </svg>
+            </div>
+            <div style="margin-left: 6px">Home</div>
+        </div>
+        <div class="sidebar-box flex justify-content align-items" onclick="location.href='/repo.php'">
+            <div style="margin-top: 6px">
+                <svg viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" height="1em" width="1em">
+                    <path d="M4 19V5a2 2 0 0 1 2-2h13.4a.6.6 0 0 1 .6.6v13.114" stroke="currentColor" stroke-linecap="round"/>
+                    <path d="M15 17v5l2.5-1.6L20 22v-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 17h14" stroke="currentColor" stroke-linecap="round"/>
+                    <path d="M6 17a2 2 0 1 0 0 4h5.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div style="margin-left: 6px">Repositories</div>
+        </div>
+        <div class="sidebar-box flex justify-content align-items" onclick="location.href='/aboutMe.php'">
+            <div style="margin-top: 6px">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="1em" width="1em">
+                    <path d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z"/>
+                    <path d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z"/>
+                </svg>
+            </div>
+            <div style="margin-left: 6px">About Me</div>
+        </div>
+    </div>
+    <div class="app flex" id="app">
+        <div class="card">
+            <div class="card-header" style="background-image: url(assets/card-header1.png)"></div>
+            <div class="card-content">
+                <a class="h2" href="repo/sonolus-server-cpp.php">Sonolus Server</a>
+                <p>A sample api server for Sonolus, use C++ & MySQL/SQLite to develop. You can use it to test your own Sonolus engine.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" style="background-image: url(assets/card-header2.png)"></div>
+            <div class="card-content">
+                <a class="h2" href="server/hanipure.php">Hanipure Official Chart</a>
+                <p>Fork version game: Honeyworks Premium Live in Sonolus.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" style="background-image: url(assets/card-header3.png)"></div>
+            <div class="card-content">
+                <a class="h2" href="repo/lyoj.php">LittleYang OnlineJudge</a>
+                <p>Cross platform online judge system.</p>
+            </div>
+        </div>
+    </div>
+</body>
