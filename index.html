@@ -7,13 +7,14 @@
 </head>
 <body>
     <div class="sidebar" id="sidebar" style="left: -1000px"></div>
-    <div class="app flex" id="app"></div>
+    <div class="app flex flex-wrap" id="app"></div>
     <script>
         addLoadEvent(async function(){
             importHTML("/component/sidebar.html", "sidebar");
-            insertCard("/assets/card-header1.png", "https://github.com/SonolusHaniwa/sonolus-server-cpp", "Sonolus Server", "A sample api server for Sonolus, use C++ & MySQL/SQLite to develop. You can use it to test your own Sonolus engine.");
+            insertCard("/assets/card-header3.png", "https://github.com/SonolusHaniwa/sonolus.h", "Sonolus Engine Library", "C++ based Developer Toolkit for Sonolus");
+            insertCard("/assets/card-header3.png", "https://github.com/SonolusHaniwa/sonolus-server-cpp", "Sonolus Server", "A sample api server for Sonolus, use C++ & MySQL/SQLite to develop. You can use it to test your own Sonolus engine.");
             insertCard("/assets/card-header2.png", "/server/hanipure.html", "Hanipure in Sonolus", "Fork version game: Honeyworks Premium Live in Sonolus.");
-            insertCard("/assets/card-header3.png", "https://github.com/lyoj-dev/lyoj", "LittleYang OnlineJudge", "Cross platform online judge system.");
+            insertCard("/assets/card-header1.png", "https://github.com/lyoj-dev/lyoj", "LittleYang OnlineJudge", "Cross platform online judge system.");
             loadCard();
         });
     </script>
